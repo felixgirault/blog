@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Bijour</title>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<header class="page-header">
+			<p role="banner">Blog de Jean-Michel Jarre.</p>
+
+			<nav role="navigation">
+				<ul>
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="page" role="main">
+			<article role="article">
+				<header>
+					<h1>Titre de l'article sur plusieurs lignes</h1>
+				</header>
+
+				<div>
+					<p>Pellentesque tortor morbi tristique senectus et netus et tincidunt fames ac turpis egestas.</p>
+					<p>Pellentesque habitant consectetuer tristique senectus et netus et malesuada fames ac turpis amet. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+					<ul>
+						<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+						<li>Aliquam tincidunt mauris eu risus.</li>
+						<li>Vestibulum auctor dapibus neque.</li>
+					</ul>
+
+					<h2>Section</h2>
+					<p>Pellentesque habitant morbi tristique senectus et netus et ipsum fames ac turpis egestas.</p>
+					<code>
+<pre><span class="kw">class</span> SuperHero {
+
+	<span class="kw">protected</span> $_isFlying = <span class="kw">false</span>;
+
+	<span class="kw">public function</span> fly( ) {
+		$this->_isFlying = <span class="kw">true</span>;
+	}
+
+	<span class="kw">public function</span> aReallyLongMethodNameThatIsPerfectlyUseless( ) {
+		<span class="kw">return</span> 'A fucking lorem ipsum dolor sit amet dummy string.';
+	}
+}</pre>
+					</code>
+
+					<h3>Sous-section</h3>
+					<p>Pellentesque amet morbi tincidunt senectus et netus et malesuada fames ac tortor ipsum.</p>
+				</div>
+
+				<footer>
+					<p>Par <span>author</span>, le <time datetime="sdfs" pubdate="pubdate">12 décembre 2012</time>.</p>
+				</footer>
+			</article>
+
+			<nav class="siblings" role="navigation">
+				<a href="#">Article précédent</a>
+				<a href="#">Article suivant</a>
+			</nav>
+		</div>
+
+		<footer class="page-footer">
+			<p>Footer.</p>
+		</footer>
+	</body>
+</html>

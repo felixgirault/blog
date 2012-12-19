@@ -1,0 +1,195 @@
+/**
+ *
+ */
+
+@import url( 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Source+Code+Pro' );
+
+
+
+/**
+ *
+ */
+
+html,
+body,
+p,
+ul,
+code,
+pre {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #222;
+	font-family: 'Source Sans Pro', Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
+	font-size: 1.125em;
+	line-height: 1.333333;
+}
+
+body {
+	padding: 1.333333em;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav a {
+	display: inline-block;
+	padding: 0.666666em;
+	background: #888;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background: #f88;
+}
+
+.page {
+	padding: 5.333333em 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+p,
+ul {
+	max-width: 30em;
+}
+
+article ul {
+	margin-bottom: 1.333333em;
+	list-style: none;
+}
+
+article li {
+	position: relative;
+	padding: 0 0 0 1.333333em;
+}
+
+article li:before {
+	content: '•';
+	display: block;
+	width: 1.333333em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	line-height: 1.333333em;
+}
+
+article footer {
+	color: #888;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-weight: bold;
+}
+
+h1 {
+	font-weight: bolder;
+	font-size: 2em;	/* 36 */
+	line-height: 1.333333em;	/* 48 */
+}
+
+h2 {
+	font-size: 1em;
+	line-height: 1.333333em;
+}
+
+h3 {
+	text-transform: lowercase;
+	font-weight: normal;
+	font-variant: small-caps;
+	font-size: 1em;
+	line-height: 1.333333em;
+}
+
+h1, h2, h3, h4, h5, h6,
+p,
+code {
+	margin-bottom: 1.333333em;
+}
+
+code {
+	display: block;
+	border-top: 1px dotted #ddd;
+	border-bottom: 1px dotted #ddd;
+	margin: 0 -1.333333em;
+	padding: 1.333333em;
+	background: #f8f8f8;
+	color: #444;
+	font-family: 'Source Code Pro', 'Andale Mono', 'Lucida Console', monospace;
+	font-size: 1em;
+	line-height: 1.333333em;
+}
+
+code .kw {
+	font-weight: bold;
+}
+
+.siblings {
+	padding-top: 2.666666em;
+	max-width: 30em;
+	*zoom: 1;
+}
+
+.siblings:before,
+.siblings:after {
+    content: ' ';
+    display: table;
+}
+
+.siblings:after {
+    clear: both;
+}
+
+.siblings a {
+	float: left;
+}
+
+.siblings a + a {
+	float: right;
+}
+
+@media screen and ( min-width: 40em ) {
+
+	body {
+		padding: 1.333333em 2.666666em;
+	}
+
+	code {
+		margin: 0 -2.666666em 1.333333em -2.666666em;
+		padding: 1.333333em 2.666666em;
+	}
+}
+
+@media screen and ( min-width: 60em ) {
+
+	body {
+		padding: 2.666666em 3.999999em;
+	}
+
+	code {
+		margin: 0 -3.999999em 1.333333em -3.999999em;
+		padding: 1.333333em 3.999999em;
+	}
+}
+
+@media screen and ( min-width: 80em ) {
+
+	body {
+		padding: 2.666666em 5.333333em;
+	}
+
+	code {
+		margin: 0 -5.333333em 1.333333em -5.333333em;
+		padding: 1.333333em 5.333333em;
+	}
+}
