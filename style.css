@@ -31,6 +31,15 @@ body {
 	padding: 1.333333em;
 }
 
+.page-header,
+.page {
+	margin-bottom: 5.333333em;
+}
+
+.brand {
+	line-height: 2.666666em;
+}
+
 nav ul {
 	list-style: none;
 }
@@ -52,14 +61,14 @@ nav a:hover {
 	background: #f88;
 }
 
-.page {
-	padding: 5.333333em 0;
-}
-
 h1, h2, h3, h4, h5, h6,
 p,
 ul {
 	max-width: 30em;
+}
+
+article {
+	margin-bottom: 5.333333em;
 }
 
 article ul {
@@ -83,8 +92,27 @@ article li:before {
 	line-height: 1.333333em;
 }
 
+article a {
+	color: #08c;
+	text-decoration: none;
+}
+
+article a:visited {
+	color: #80c;
+}
+
 article footer {
+	margin-top: 2.666666em;
 	color: #888;
+}
+
+article footer a,
+article footer a:visited {
+	color: #444;
+}
+
+article footer a:hover {
+	text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -93,6 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+	max-width: 15em;
 	font-weight: bolder;
 	font-size: 2em;	/* 36 */
 	line-height: 1.333333em;	/* 48 */
@@ -121,56 +150,76 @@ code {
 	display: block;
 	border-top: 1px dotted #ddd;
 	border-bottom: 1px dotted #ddd;
-	margin: 0 -1.333333em;
+	margin: 0 -1.333333em 1.333333em -1.333333em;
 	padding: 1.333333em;
 	background: #f8f8f8;
 	color: #444;
 	font-family: 'Source Code Pro', 'Andale Mono', 'Lucida Console', monospace;
 	font-size: 1em;
 	line-height: 1.333333em;
+	overflow-x: auto;
+	-moz-tab-size: 5;
+	-o-tab-size: 5;
+	tab-size: 5;
 }
 
-code .kw {
+code .k,
+code .c,
+code .m {
 	font-weight: bold;
 }
 
-.siblings {
+code .s {
+	color: #d14;
+}
+
+code .c {
+	color: #458;
+}
+
+code .m {
+	color: #800;
+}
+
+code .v {
+	color: #088;
+}
+
+.page-footer {
+	border-top: 1px dotted #ddd;
 	padding-top: 2.666666em;
-	max-width: 30em;
-	*zoom: 1;
 }
 
-.siblings:before,
-.siblings:after {
-    content: ' ';
-    display: table;
+.page-footer ul {
+	list-style: none;
 }
 
-.siblings:after {
-    clear: both;
+.page-footer a {
+	color: #888;
+	text-decoration: none;
 }
 
-.siblings a {
-	float: left;
+.page-footer a:hover {
+	color: #222;
 }
 
-.siblings a + a {
-	float: right;
+.twitter {
+	color: #00aced;
+}
+
+.github {
+	color: #4183c4;
+}
+
+.ouatch {
+	color: #8c0;
+}
+
+.forrst {
+	color: #5b9c69;
 }
 
 @media screen and ( min-width: 40em ) {
-
-	body {
-		padding: 1.333333em 2.666666em;
-	}
-
-	code {
-		margin: 0 -2.666666em 1.333333em -2.666666em;
-		padding: 1.333333em 2.666666em;
-	}
-}
-
-@media screen and ( min-width: 60em ) {
 
 	body {
 		padding: 2.666666em 3.999999em;
@@ -184,12 +233,22 @@ code .kw {
 
 @media screen and ( min-width: 80em ) {
 
-	body {
-		padding: 2.666666em 5.333333em;
+	.page-header {
+		float: left;
+		width: 15em;
+	}
+
+	.brand {
+		margin-bottom: 2.666666em;
+	}
+
+	.page, .page-footer {
+		margin-left: 15em;
+		padding-left: 3.999999em;
 	}
 
 	code {
-		margin: 0 -5.333333em 1.333333em -5.333333em;
-		padding: 1.333333em 5.333333em;
+		margin: 0 -3.999999em 1.333333em -22.999999em;
+		padding: 1.333333em 22.999999em;
 	}
 }

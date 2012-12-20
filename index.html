@@ -11,12 +11,12 @@
 
 	<body>
 		<header class="page-header">
-			<p role="banner">Blog de Jean-Michel Jarre.</p>
+			<p class="brand" role="banner">Blog de Jean-Michel Jarre.</p>
 
 			<nav role="navigation">
 				<ul>
-					<li><a href="#">Item 1</a></li>
-					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Accueil</a></li>
+					<li><a href="#">Articles</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -29,7 +29,7 @@
 
 				<div>
 					<p>Pellentesque tortor morbi tristique senectus et netus et tincidunt fames ac turpis egestas.</p>
-					<p>Pellentesque habitant consectetuer tristique senectus et netus et malesuada fames ac turpis amet. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+					<p>Pellentesque habitant <a href="#">consectetuer tristique</a> senectus et netus et malesuada fames ac turpis amet. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 					<ul>
 						<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
 						<li>Aliquam tincidunt mauris eu risus.</li>
@@ -39,26 +39,26 @@
 					<h2>Section</h2>
 					<p>Pellentesque habitant morbi tristique senectus et netus et ipsum fames ac turpis egestas.</p>
 					<code>
-<pre><span class="kw">class</span> SuperHero {
+<pre><span class="k">class</span> <span class="c">SuperHero</span> {
 
-	<span class="kw">protected</span> $_isFlying = <span class="kw">false</span>;
+	<span class="k">protected</span> <span class="v">$_isFlying</span> = <span class="k">false</span>;
 
-	<span class="kw">public function</span> fly( ) {
-		$this->_isFlying = <span class="kw">true</span>;
+	<span class="k">public function</span> <span class="m">fly</span>( ) {
+		<span class="v">$this</span>-><span class="v">_isFlying</span> = <span class="k">true</span>;
 	}
 
-	<span class="kw">public function</span> aReallyLongMethodNameThatIsPerfectlyUseless( ) {
-		<span class="kw">return</span> 'A fucking lorem ipsum dolor sit amet dummy string.';
+	<span class="k">public function</span> <span class="m">aPerfectlyUselessMethod</span>( ) {
+		<span class="k">return</span> <span class="s">'A fucking lorem ipsum dolor sit amet dummy string.'</span>;
 	}
 }</pre>
 					</code>
 
 					<h3>Sous-section</h3>
-					<p>Pellentesque amet morbi tincidunt senectus et netus et malesuada fames ac tortor ipsum.</p>
+					<p>Pellentesque amet morbi tincidunt senectus et netus <a href="#">et malesuada fames</a> ac tortor ipsum.</p>
 				</div>
 
 				<footer>
-					<p>Par <span>author</span>, le <time datetime="sdfs" pubdate="pubdate">12 décembre 2012</time>.</p>
+					<p>Par <a href="#">Jean-Michel Jarre</a>, le <time datetime="2012-12-12T12:12+00:00">12 décembre 2012</time>.</p>
 				</footer>
 			</article>
 
@@ -69,7 +69,12 @@
 		</div>
 
 		<footer class="page-footer">
-			<p>Footer.</p>
+			<ul>
+				<li><a href="#"><span class="twitter">Twitter</span> — 36 15 ma life avec du web dedans.</a></li>
+				<li><a href="#"><span class="github">Github</span> — à vos fourchettes !</a></li>
+				<li><a href="#"><span class="forrst">Forrst</span> — quelques tranches de design.</a></li>
+				<li><a href="#"><span class="ouatch">Ouatch</span> — des vidéos qu'elles sont bien pour les regarder.</a></li>
+			</ul>
 		</footer>
 	</body>
 </html>
