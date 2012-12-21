@@ -24,20 +24,20 @@ html {
 	color: #222;
 	font-family: 'Source Sans Pro', Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
 	font-size: 1.125em;
-	line-height: 1.333333;
+	line-height: 1.333;
 }
 
 body {
-	padding: 1.333333em;
+	padding: 1.333em;
 }
 
 .page-header,
 .page {
-	margin-bottom: 5.333333em;
+	margin-bottom: 5.333em;
 }
 
 .brand {
-	line-height: 2.666666em;
+	line-height: 2.666em;
 }
 
 nav ul {
@@ -50,15 +50,21 @@ nav li {
 
 nav a {
 	display: inline-block;
-	padding: 0.666666em;
+	padding: 0.666em;
 	background: #888;
 	color: #fff;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-nav a:hover {
-	background: #f88;
+nav a:active,
+nav a.active {
+	background: #c40;
+}
+
+nav a:hover,
+nav a:focus {
+	background: #f50;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -68,28 +74,26 @@ ul {
 }
 
 article {
-	margin-bottom: 5.333333em;
+	margin-bottom: 5.333em;
 }
 
 article ul {
-	margin-bottom: 1.333333em;
+	margin-bottom: 1.333em;
 	list-style: none;
 }
 
 article li {
 	position: relative;
-	padding: 0 0 0 1.333333em;
+	padding: 0 0 0 1.333em;
 }
 
 article li:before {
 	content: '•';
 	display: block;
-	width: 1.333333em;
 	position: absolute;
 	top: 0;
 	left: 0;
-	text-align: center;
-	line-height: 1.333333em;
+	line-height: 1.333em;
 }
 
 article a {
@@ -97,13 +101,23 @@ article a {
 	text-decoration: none;
 }
 
+article a:hover,
+article a:focus {
+	text-decoration: underline;
+}
+
 article a:visited {
-	color: #80c;
+	color: #069;
 }
 
 article footer {
-	margin-top: 2.666666em;
+	margin-top: 2.666em;
 	color: #888;
+}
+
+article footer p {
+	font-size: 0.888em;
+	line-height: 1.5em;
 }
 
 article footer a,
@@ -111,7 +125,8 @@ article footer a:visited {
 	color: #444;
 }
 
-article footer a:hover {
+article footer a:hover,
+article footer a:focus {
 	text-decoration: underline;
 }
 
@@ -124,12 +139,12 @@ h1 {
 	max-width: 15em;
 	font-weight: bolder;
 	font-size: 2em;	/* 36 */
-	line-height: 1.333333em;	/* 48 */
+	line-height: 1.333em;	/* 48 */
 }
 
 h2 {
 	font-size: 1em;
-	line-height: 1.333333em;
+	line-height: 1.333em;
 }
 
 h3 {
@@ -137,26 +152,26 @@ h3 {
 	font-weight: normal;
 	font-variant: small-caps;
 	font-size: 1em;
-	line-height: 1.333333em;
+	line-height: 1.333em;
 }
 
 h1, h2, h3, h4, h5, h6,
 p,
 code {
-	margin-bottom: 1.333333em;
+	margin-bottom: 1.333em;
 }
 
 code {
 	display: block;
 	border-top: 1px dotted #ddd;
 	border-bottom: 1px dotted #ddd;
-	margin: 0 -1.333333em 1.333333em -1.333333em;
-	padding: 1.333333em;
+	margin: 0 -1.333em 1.333em -1.333em;
+	padding: 1.333em;
 	background: #f8f8f8;
 	color: #444;
 	font-family: 'Source Code Pro', 'Andale Mono', 'Lucida Console', monospace;
 	font-size: 1em;
-	line-height: 1.333333em;
+	line-height: 1.333em;
 	overflow-x: auto;
 	-moz-tab-size: 5;
 	-o-tab-size: 5;
@@ -187,7 +202,7 @@ code .v {
 
 .page-footer {
 	border-top: 1px dotted #ddd;
-	padding-top: 2.666666em;
+	padding-top: 2.666em;
 }
 
 .page-footer ul {
@@ -195,39 +210,52 @@ code .v {
 }
 
 .page-footer a {
+	display: block;
+	margin-bottom: 1.333em;
 	color: #888;
 	text-decoration: none;
 }
 
-.page-footer a:hover {
+.page-footer a:hover,
+.page-footer a:focus {
 	color: #222;
 }
 
+.page-footer span {
+	display: block;
+}
+
 .twitter {
-	color: #00aced;
+	color: #08c;
 }
 
 .github {
-	color: #4183c4;
+	color: #069;
+}
+
+.forrst {
+	color: #690;
 }
 
 .ouatch {
 	color: #8c0;
 }
 
-.forrst {
-	color: #5b9c69;
+::moz-selection,
+::selection {
+	background: #f50;
+	color: #fff;
 }
 
 @media screen and ( min-width: 40em ) {
 
 	body {
-		padding: 2.666666em 3.999999em;
+		padding: 2.666em 3.999em;
 	}
 
 	code {
-		margin: 0 -3.999999em 1.333333em -3.999999em;
-		padding: 1.333333em 3.999999em;
+		margin: 0 -3.999em 1.333em -3.999em;
+		padding: 1.333em 3.999em;
 	}
 }
 
@@ -239,16 +267,30 @@ code .v {
 	}
 
 	.brand {
-		margin-bottom: 2.666666em;
+		margin-bottom: 2.666em;
 	}
 
-	.page, .page-footer {
+	.page {
 		margin-left: 15em;
-		padding-left: 3.999999em;
+		padding-left: 7.999em;
 	}
 
 	code {
-		margin: 0 -3.999999em 1.333333em -22.999999em;
-		padding: 1.333333em 22.999999em;
+		margin: 0 -3.999em 1.333em -26.999em;
+		padding: 1.333em 26.999em;
+	}
+
+	.page-footer {
+		position: absolute;
+		top: 13.333em;
+		left: 3.999em;
+		width: 15em;
+		border-top: none;
+	}
+
+	.page-footer a {
+		font-size: 0.888em;
+		line-height: 1em;
+		margin-bottom: 1em;
 	}
 }
