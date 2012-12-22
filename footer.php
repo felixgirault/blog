@@ -8,5 +8,7 @@
 				<li><a href="http://ouatch.fr"><span class="ouatch">Ouatch</span> des vidéos qu'elles sont bien pour les regarder.</a></li>
 			</ul>
 		</footer>
+
+		<?php wp_footer( ); ?>
 	</body>
 </html>

@@ -21,6 +21,7 @@ pre {
 }
 
 html {
+	background: #fff;
 	color: #222;
 	font-family: 'Source Sans Pro', Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
 	font-size: 1.125em;
@@ -29,6 +30,28 @@ html {
 
 body {
 	padding: 1.333em;
+}
+
+ul {
+	list-style: none;
+}
+
+ul ul {
+	padding-left: 1.333em;
+}
+
+a {
+	color: #08c;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #069;
 }
 
 .page-header,
@@ -40,10 +63,6 @@ body {
 	line-height: 2.666em;
 }
 
-nav ul {
-	list-style: none;
-}
-
 nav li {
 	display: inline-block;
 }
@@ -51,7 +70,7 @@ nav li {
 nav a {
 	display: inline-block;
 	padding: 0.666em;
-	background: #888;
+	background: #ccc;
 	color: #fff;
 	font-weight: bold;
 	text-decoration: none;
@@ -65,6 +84,11 @@ nav a.active {
 nav a:hover,
 nav a:focus {
 	background: #f50;
+	text-decoration: none;
+}
+
+nav a:visited {
+	color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -73,13 +97,17 @@ ul {
 	max-width: 30em;
 }
 
-article {
+.entry,
+.siblings {
 	margin-bottom: 5.333em;
+}
+
+.comment {
+	margin-top: 2.666em;
 }
 
 article ul {
 	margin-bottom: 1.333em;
-	list-style: none;
 }
 
 article li {
@@ -96,28 +124,14 @@ article li:before {
 	line-height: 1.333em;
 }
 
-article a {
-	color: #08c;
-	text-decoration: none;
-}
-
-article a:hover,
-article a:focus {
-	text-decoration: underline;
-}
-
-article a:visited {
-	color: #069;
-}
-
-article footer {
+.entry footer {
 	margin-top: 2.666em;
-	color: #888;
 }
 
 article footer p {
 	font-size: 0.888em;
 	line-height: 1.5em;
+	color: #888;
 }
 
 article footer a,
@@ -130,9 +144,16 @@ article footer a:focus {
 	text-decoration: underline;
 }
 
+.siblings	a span {
+	display: block;
+	font-weight: normal;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-	font-weight: bold;
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.333em;
 }
 
 h1 {
@@ -143,25 +164,38 @@ h1 {
 }
 
 h2 {
-	font-size: 1em;
-	line-height: 1.333em;
+	font-weight: bold;
 }
 
 h3 {
 	text-transform: lowercase;
-	font-weight: normal;
 	font-variant: small-caps;
-	font-size: 1em;
-	line-height: 1.333em;
+}
+
+h4 {
+	font-style: italic;
+}
+
+h5 {
+	color: #444;
+}
+
+h6 {
+	color: #888;
 }
 
 h1, h2, h3, h4, h5, h6,
 p,
-code {
+pre {
 	margin-bottom: 1.333em;
 }
 
+pre,
 code {
+	font-family: 'Source Code Pro', 'Andale Mono', 'Lucida Console', monospace;
+}
+
+pre {
 	display: block;
 	border-top: 1px dotted #ddd;
 	border-bottom: 1px dotted #ddd;
@@ -169,7 +203,6 @@ code {
 	padding: 1.333em;
 	background: #f8f8f8;
 	color: #444;
-	font-family: 'Source Code Pro', 'Andale Mono', 'Lucida Console', monospace;
 	font-size: 1em;
 	line-height: 1.333em;
 	overflow-x: auto;
@@ -178,26 +211,31 @@ code {
 	tab-size: 5;
 }
 
-code .k,
-code .c,
-code .m {
+pre .k,
+pre .c,
+pre .m {
 	font-weight: bold;
 }
 
-code .s {
+pre .s {
 	color: #d14;
 }
 
-code .c {
+pre .c {
 	color: #458;
 }
 
-code .m {
+pre .m {
 	color: #800;
 }
 
-code .v {
+pre .v {
 	color: #088;
+}
+
+code {
+	padding: 0 0.333em;
+	background: #f8f8f8;
 }
 
 .page-footer {
@@ -253,7 +291,7 @@ code .v {
 		padding: 2.666em 3.999em;
 	}
 
-	code {
+	pre {
 		margin: 0 -3.999em 1.333em -3.999em;
 		padding: 1.333em 3.999em;
 	}
@@ -275,9 +313,10 @@ code .v {
 		padding-left: 7.999em;
 	}
 
-	code {
-		margin: 0 -3.999em 1.333em -26.999em;
-		padding: 1.333em 26.999em;
+	pre {
+		margin: 0 -3.999em 1.333em -3.999em;
+		padding: 1.333em 3.999em;
+		border-left: 1px dotted #ddd;
 	}
 
 	.page-footer {
@@ -289,8 +328,22 @@ code .v {
 	}
 
 	.page-footer a {
+		margin-bottom: 1em;
 		font-size: 0.888em;
 		line-height: 1em;
-		margin-bottom: 1em;
+		text-shadow: 0 0 0.333em #fff;
+	}
+}
+
+@media screen and ( min-width: 80em ) and ( min-height: 35em ) {
+
+	.page-header {
+		position: fixed;
+		top: 2.666em;
+		left: 3.999em;
+	}
+
+	.page-footer {
+		position: fixed;
 	}
 }
