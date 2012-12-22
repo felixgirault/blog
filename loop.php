@@ -18,7 +18,5 @@
 
 			echo '</nav>';
 		}
-	} else {
-		get_template_part( '404' );
 	}
 ?>

@@ -1,6 +1,8 @@
+<?php get_header( ); ?>
+
 <article>
 	<header>
-		<p>Fatal error 404 of the death !</p>
+		<h1>Fatal error 404 of the death !</h1>
 	</header>
 
 	<div class="content">
@@ -12,3 +14,5 @@
 		</p>
 	</div>
 </article>
+
+<?php get_footer( ); ?>
