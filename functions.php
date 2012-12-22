@@ -1,7 +1,7 @@
 <?php
 
 /**
- *
+ *	Removes useless scripts.
  */
 
 function fgSetupScripts( ) {
@@ -10,6 +10,8 @@ function fgSetupScripts( ) {
 	wp_deregister_script( 'l10n' );
 
 	if ( is_single( )) {
+		wp_register_script( 'prism', get_template_directory_uri( ) . '/prism.js' );
+		wp_enqueue_script( 'prism' );
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
@@ -19,7 +21,7 @@ add_action( 'wp_enqueue_scripts', 'fgSetupScripts' );
 
 
 /**
- *
+ *	Removes useless head elements.
  */
 
 function fgSetupActions( ) {
@@ -34,16 +36,15 @@ add_action( 'init', 'fgSetupActions' );
 
 
 /**
- *
+ *	Adds automatic feed links output.
  */
 
 add_theme_support( 'automatic-feed-links' );
-add_theme_support( 'post-thumbnails' );
 
 
 
 /**
- *
+ *	Registers the main menu.
  */
 
 register_nav_menu( 'main', 'Menu principal' );
@@ -51,7 +52,7 @@ register_nav_menu( 'main', 'Menu principal' );
 
 
 /**
- *
+ *	Filters content to ensure a good title hierarchy.
  */
 
 function fgContentFilter( $content ) {
@@ -70,7 +71,7 @@ function fgContentFilter( $content ) {
 		}
 	}
 
-	$level = is_singular( ) ? 1 : 1;
+	$level = 1;
 	$level -= $topLevel - 1;
 
 	return preg_replace(
@@ -85,11 +86,12 @@ add_filter( 'the_content', 'fgContentFilter' );
 
 
 /**
- *
+ *	Removes annoying WordPress things...
  */
 
 add_filter( 'show_admin_bar', '__return_false' );
-//remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_content', 'wptexturize' );
 
 
 
@@ -214,7 +216,7 @@ function fgCommentCallback( $comment, $args, $depth ) {
  *	Prints a pingback.
  */
 
-function fgPingCallback( $comment, $args, $depth ) {
+function fgPingbackCallback( $comment, $args, $depth ) {
 
 	$GLOBALS['comment'] = $comment;
 ?>
@@ -267,4 +269,33 @@ class FgMenuWalker extends Walker_Nav_Menu {
 	}
 }
 
-?>
+
+
+/**
+ *	Legacy shortcodes to use Prism.js instead of the old highlighter.
+ */
+
+function fgCssShortcode( $attributes, $content ) {
+
+	return '<pre><code class="language-css">' . $content . '</code></pre>';
+}
+
+function fgHtmlShortcode( $attributes, $content ) {
+
+	return '<pre><code class="language-markup">' . $content . '</code></pre>';
+}
+
+function fgJavascriptShortcode( $attributes, $content ) {
+
+	return '<pre><code class="language-javascript">' . $content . '</code></pre>';
+}
+
+function fgPhpShortcode( $attributes, $content ) {
+
+	return '<pre><code class="language-php">' . $content . '</code></pre>';
+}
+
+add_shortcode( 'css', 'fgCssShortcode' );
+add_shortcode( 'html', 'fgHtmlShortcode' );
+add_shortcode( 'javascript', 'fgJavascriptShortcode' );
+add_shortcode( 'php', 'fgPhpShortcode' );

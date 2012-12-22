@@ -14,8 +14,10 @@ html,
 body,
 p,
 ul,
+ol,
 code,
-pre {
+pre,
+img {
 	margin: 0;
 	padding: 0;
 }
@@ -52,6 +54,24 @@ a:focus {
 
 a:visited {
 	color: #069;
+}
+
+blockquote {
+	position: relative;
+	margin: 0;
+	padding: 0 2.666em;
+	color: #888;
+	font-style: italic;
+}
+
+blockquote p:before {
+	content: '“';
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #aaa;
+	font-size: 2.666em;
+	line-height: 1em;
 }
 
 .page-header,
@@ -106,8 +126,15 @@ ul {
 	margin-top: 2.666em;
 }
 
-article ul {
+article ul,
+article ol,
+article img,
+article iframe {
 	margin-bottom: 1.333em;
+}
+
+article img.wp-smiley {
+	margin-bottom: 0;
 }
 
 article li {
@@ -115,7 +142,7 @@ article li {
 	padding: 0 0 0 1.333em;
 }
 
-article li:before {
+article ul li:before {
 	content: '•';
 	display: block;
 	position: absolute;
@@ -200,7 +227,7 @@ pre {
 	border-top: 1px dotted #ddd;
 	border-bottom: 1px dotted #ddd;
 	margin: 0 -1.333em 1.333em -1.333em;
-	padding: 1.333em;
+	padding: 0 -1.333em 1.333em -1.333em;
 	background: #f8f8f8;
 	color: #444;
 	font-size: 1em;
@@ -211,10 +238,16 @@ pre {
 	tab-size: 5;
 }
 
-pre .k,
+.token.keyword,
+.token.delimitator,
 pre .c,
 pre .m {
 	font-weight: bold;
+}
+
+.token.comment {
+	color: #888;
+	font-style: italic;
 }
 
 pre .s {
@@ -236,6 +269,8 @@ pre .v {
 code {
 	padding: 0 0.333em;
 	background: #f8f8f8;
+	font-size: 0.888em;
+	line-height: 1.5em;
 }
 
 .page-footer {
