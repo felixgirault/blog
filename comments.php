@@ -38,3 +38,5 @@
 		</section>
 	<?php endif; ?>
 <?php endforeach; ?>
+
+<?php comment_form( ); ?>

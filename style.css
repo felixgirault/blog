@@ -74,6 +74,26 @@ blockquote p:before {
 	line-height: 1em;
 }
 
+label {
+	display: block;
+}
+
+input,
+textarea {
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	width: 30em;
+	padding: 0.666em;
+	font-family: 'Source Sans Pro', Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
+	font-size: 1em;
+	line-height: 1.333em;
+}
+
+#submit {
+	width: auto;
+	border: none;
+}
+
 .page-header,
 .page {
 	margin-bottom: 5.333em;
@@ -87,7 +107,8 @@ nav li {
 	display: inline-block;
 }
 
-nav a {
+nav a,
+#submit {
 	display: inline-block;
 	padding: 0.666em;
 	background: #ccc;
@@ -97,12 +118,15 @@ nav a {
 }
 
 nav a:active,
-nav a.active {
+nav a.active,
+#submit:active {
 	background: #c40;
 }
 
 nav a:hover,
-nav a:focus {
+nav a:focus,
+#submit:hover,
+#submit:focus {
 	background: #f50;
 	text-decoration: none;
 }
