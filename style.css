@@ -394,11 +394,23 @@ code {
 	}
 }
 
+@media screen and ( min-height: 35em ) {
+
+	body {
+		padding: 5.333em 3.999em;
+	}
+
+	.page-footer {
+		position: absolute;
+		top: 15.999em;
+	}
+}
+
 @media screen and ( min-width: 80em ) and ( min-height: 35em ) {
 
 	.page-header {
 		position: fixed;
-		top: 2.666em;
+		top: 5.333em;
 		left: 3.999em;
 	}
 
