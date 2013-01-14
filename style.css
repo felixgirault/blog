@@ -252,7 +252,7 @@ pre {
 	border-top: 1px dotted #ddd;
 	border-bottom: 1px dotted #ddd;
 	margin: 0 -1.333em 1.333em -1.333em;
-	padding: 0 -1.333em 1.333em -1.333em;
+	padding: 0 1.333em 1.333em 1.333em;
 	background: #f8f8f8;
 	color: #444;
 	font-size: 1em;
