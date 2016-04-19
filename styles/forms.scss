@@ -1,0 +1,23 @@
+/**
+ *
+ */
+
+label {
+	display: block;
+}
+
+input,
+textarea {
+	@include typi($typi-regular);
+	box-sizing: border-box;
+	border: 1px solid $color-input-border;
+	width: 100%;
+	padding: vr(1/2);
+	font-family: $font-family-sans;
+}
+
+#submit {
+	@include button();
+	width: auto;
+	border: none;
+}

@@ -1,0 +1,100 @@
+/**
+ *
+ */
+
+.entry {
+	margin-bottom: vr(4);
+}
+
+.entry-header {
+	@include container();
+	margin-bottom: vr(2);
+}
+
+.entry-body {
+	margin-bottom: vr(2);
+
+	p,
+	ul,
+	ol,
+	img,
+	iframe {
+		@include container();
+		margin-bottom: vr(1);
+	}
+
+	img.wp-smiley {
+		margin-bottom: 0;
+	}
+
+	li {
+		position: relative;
+		padding: 0 0 0 vr(1);
+	}
+
+	ul li:before {
+		content: '•';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		line-height: vr(1);
+	}
+}
+
+.entry-footer {
+	@include container();
+	color: $color-entry-footer-text;
+
+	a,
+	a:visited {
+		color: $color-entry-footer-link;
+	}
+
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+}
+
+.entry-siblings {
+	@include container();
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: vr(4);
+
+	a {
+		@include button();
+
+		span {
+			display: block;
+			font-weight: normal;
+		}
+	}
+}
+
+.entry-comments,
+.comment-respond {
+	@include container();
+}
+
+.entry-comments-header {
+	margin-bottom: vr(2);
+}
+
+.entry-comments-items {
+	margin-bottom: vr(3);
+}
+
+.entry-comment {
+	margin-bottom: vr(1);
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.entry-comment-footer {
+	@include typi($typi-small);
+	color: $color-entry-comment-footer-text;
+}

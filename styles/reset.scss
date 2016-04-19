@@ -1,0 +1,106 @@
+/**
+ *
+ */
+
+html,
+body,
+p,
+ul,
+ol,
+code,
+pre,
+img {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	@include typi-base();
+	background: $color-white;
+	color: $color-text;
+	font-family: $font-family-sans;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include typi($typi-regular);
+	margin: 0 0 vr(1) 0;
+	font-weight: normal;
+}
+
+h1 {
+	@include typi($typi-h1);
+	color: $color-blue-dark;
+	font-weight: bolder;
+}
+
+h2 {
+	@include typi($typi-h2);
+	color: $color-blue-dark;
+	font-weight: bold;
+}
+
+h3 {
+	font-weight: bold;
+}
+
+h4 {
+	text-transform: lowercase;
+	font-variant: small-caps;
+}
+
+h5 {
+	font-style: italic;
+}
+
+h6 {
+	color: $color-gray-dark-0;
+}
+
+p{
+	margin-bottom: vr(1);
+}
+
+ul {
+	list-style: none;
+}
+
+ul ul {
+	padding-left: vr(1);
+}
+
+a {
+	color: $color-link;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+
+	&:visited {
+		color: $color-link-visited;
+	}
+}
+
+blockquote {
+	position: relative;
+	margin: 0;
+	padding: 0 vr(2);
+	color: $color-blockquote-text;
+	font-style: italic;
+}
+
+blockquote p:before {
+	content: '“';
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: $color-blockquote-ornament;
+	font-size: vr(2);
+	line-height: 1em;
+}

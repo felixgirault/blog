@@ -3,15 +3,17 @@
 	 *	Template Name: Archives
 	 */
 
-	get_header( );
+	get_header();
 ?>
 
-<article>
-	<header>
-		<h1><?php the_title( ); ?></h1>
+<article class="entry">
+	<header class="entry-header">
+		<h1 class="entry-title">
+			<?php the_title(); ?>
+		</h1>
 	</header>
 
-	<section class="months entry">
+	<section>
 		<header>
 			<h2>Articles</h2>
 		</header>
@@ -29,7 +31,7 @@
 		</div>
 	</section>
 
-	<section class="categories entry">
+	<section>
 		<header>
 			<h2>Categories</h2>
 		</header>
@@ -49,4 +51,4 @@
 	</section>
 </article>
 
-<?php get_footer( ); ?>
+<?php get_footer(); ?>

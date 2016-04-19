@@ -1,0 +1,126 @@
+/**
+ *
+ */
+
+$breakpoints: (
+	large: vr(30)
+);
+
+$typi: (
+	null: (18px, 1.6),
+	large: (20px, 1.6)
+);
+
+$typi-small: (
+	null: (0.8em, 2)
+);
+
+$typi-regular: (
+	null: (1em, 1.6)
+);
+
+$typi-large: (
+	null: (4em, 1)
+);
+
+$typi-h1: (
+	null: (2em, 1)
+);
+
+$typi-h2: (
+	null: (1.6em, 1)
+);
+
+
+
+/**
+ *
+ */
+
+$font-family-sans:
+	'Source Sans Pro',
+	'Arial',
+	'Helvetica',
+	'Liberation Sans',
+	'FreeSans',
+	sans-serif;
+
+$font-family-mono:
+	'Source Code Pro',
+	'Andale Mono',
+	'Lucida Console',
+	monospace;
+
+
+
+/**
+ *
+ */
+$content-width: vr(25);
+
+
+
+/**
+ *
+ */
+
+$color-white: #fff;
+$color-gray-light-3: #f8f8f8;
+$color-gray-light-2: #ddd;
+$color-gray-light-1: #ccc;
+$color-gray-light-0: #aaa;
+$color-gray-dark-0: #888;
+$color-gray-dark-1: #444;
+$color-gray-dark-2: #222;
+
+$color-blue-light: #08c;
+$color-blue-dark: #069;
+$color-red-light: #f50;
+$color-red-dark: #c40;
+$color-green: #369200;
+
+
+
+/**
+ *
+ */
+
+$color-background: $color-white;
+$color-text: $color-gray-dark-2;
+
+$color-link: $color-blue-light;
+$color-link-visited: $color-blue-dark;
+
+$color-input-border: $color-gray-light-2;
+
+$color-blockquote-text: $color-gray-dark-0;
+$color-blockquote-ornament: $color-gray-light-0;
+
+$color-button-text: $color-white;
+$color-button-background: $color-gray-light-1;
+$color-button-background-hover: $color-red-light;
+$color-button-background-active: $color-red-dark;
+
+$color-code-text: $color-gray-dark-1;
+$color-code-background: $color-gray-light-3;
+$color-code-border: $color-gray-light-2;
+$color-code-function: $color-red-dark;
+$color-code-string: $color-green;
+$color-code-number: $color-blue-dark;
+$color-code-comment: $color-gray-dark-0;
+
+$color-entry-footer-text: $color-gray-dark-0;
+$color-entry-footer-link: $color-gray-dark-1;
+
+$color-entry-comment-footer-text: $color-gray-dark-0;
+
+$color-footer-separator: $color-gray-light-0;
+
+$color-social-link-title: $color-gray-dark-2;
+$color-social-link-description: $color-gray-dark-0;
+
+$color-twitter: #08c;
+$color-github: #069;
+$color-dribbble: #ea4c89;
+$color-soundcloud: #f50;
+$color-ouatch: #8c0;

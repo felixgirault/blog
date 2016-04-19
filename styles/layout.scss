@@ -1,0 +1,47 @@
+/**
+ *
+ */
+
+body {
+	padding: vr(2);
+
+	@media screen and (max-width: map-get($breakpoints, large)) {
+		padding: vr(1);
+	}
+}
+
+.page-header {
+	@include container();
+	margin-bottom: vr(4);
+
+	@media screen and (min-width: map-get($breakpoints, large)) {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.page-menu-item {
+	display: inline-block;
+}
+
+.page-menu-link {
+	@include button();
+}
+
+.page-body {
+	margin-bottom: vr(4);
+}
+
+.page-footer {
+	@include container();
+	margin-bottom: vr(2);
+
+	&:before {
+		@include typi($typi-large);
+		content: '~';
+		display: block;
+		margin: vr(3) auto;
+		color: $color-footer-separator;
+		text-align: center;
+	}
+}

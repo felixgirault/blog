@@ -1,15 +1,15 @@
 <?php
-	get_header( );
+	get_header();
 
-	if ( have_posts( )) {
-		while ( have_posts( )) {
-			the_post( );
-			get_template_part( 'entry' );
+	if (have_posts()) {
+		while (have_posts()) {
+			the_post();
+			get_template_part('entry');
 		}
 
 		global $wp_query;
 
-		if ( $wp_query->max_num_pages > 1 ) {
+		if ($wp_query->max_num_pages > 1) {
 			echo '<nav role="navigation">';
 
 			posts_nav_link(
@@ -22,5 +22,5 @@
 		}
 	}
 
-	get_footer( );
+	get_footer();
 ?>

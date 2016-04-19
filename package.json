@@ -1,0 +1,18 @@
+{
+  "name": "@fg/blog-theme",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run build-scripts && npm run build-styles -- --watch",
+    "build": "npm run build-scripts && npm run build-styles",
+    "build-styles": "node-sass --output-style compact styles/index.scss style.css",
+    "build-scripts": "cp node_modules/prismjs/prism.js prism.js"
+  },
+  "devDependencies": {
+    "node-sass": "^3.4.2",
+    "typi": "^2.1.0"
+  },
+  "dependencies": {
+    "prismjs": "^1.4.1"
+  }
+}

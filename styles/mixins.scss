@@ -1,0 +1,33 @@
+/**
+ *
+ */
+
+@mixin container {
+	margin: 0 auto;
+	max-width: $content-width;
+}
+
+@mixin button {
+	display: inline-block;
+	padding: vr(1/2);
+	background: $color-button-background;
+	color: $color-button-text;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:active,
+	&.button-active {
+		background: $color-button-background-active;
+	}
+
+	&:hover,
+	&:focus {
+		background: $color-button-background-hover;
+		text-decoration: none;
+	}
+
+	&:visited {
+		color: $color-button-text;
+	}
+}
