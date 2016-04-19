@@ -14,8 +14,8 @@ code {
 pre {
 	display: block;
 	border: 1px dotted $color-code-border;
-	margin: 0 vr(-2) vr(1) vr(-2);
-	padding: 0 vr(2);
+	margin: 0 vr(-100) vr(1) vr(-100);
+	padding: 0 vr(100);
 	background: $color-code-background;
 	color: $color-code-text;
 	font-family: $font-family-mono;
@@ -24,7 +24,6 @@ pre {
 	overflow-x: auto;
 
 	code {
-		@include container();
 		display: block;
 		margin: vr(1) auto;
 	}

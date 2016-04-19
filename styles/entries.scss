@@ -7,7 +7,6 @@
 }
 
 .entry-header {
-	@include container();
 	margin-bottom: vr(2);
 }
 
@@ -25,9 +24,12 @@
 	ol,
 	iframe,
 	img.size-full {
-		@include container();
 		display: block;
 		margin-bottom: vr(1);
+	}
+
+	img.size-full {
+		margin: 0 auto vr(1) auto;
 	}
 
 	img.wp-smiley {
@@ -49,13 +51,11 @@
 	}
 
 	.more-link {
-		@include container();
 		display: block;
 	}
 }
 
 .entry-footer {
-	@include container();
 	color: $color-entry-footer-text;
 
 	a,
@@ -70,7 +70,6 @@
 }
 
 .entry-siblings {
-	@include container();
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: vr(4);
@@ -83,11 +82,6 @@
 			font-weight: normal;
 		}
 	}
-}
-
-.entry-comments,
-.comment-respond {
-	@include container();
 }
 
 .entry-comments-header {

@@ -3,6 +3,7 @@
  */
 
 body {
+	@include container();
 	padding: vr(2);
 
 	@media screen and (max-width: map-get($breakpoints, large)) {
@@ -11,7 +12,6 @@ body {
 }
 
 .page-header {
-	@include container();
 	margin-bottom: vr(4);
 
 	@media screen and (min-width: map-get($breakpoints, large)) {
@@ -33,7 +33,6 @@ body {
 }
 
 .page-footer {
-	@include container();
 	margin-bottom: vr(2);
 
 	&:before {
