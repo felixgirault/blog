@@ -1,0 +1,23 @@
+/**
+ *
+ */
+
+.archives {
+	@include container();
+
+	@media screen and (min-width: map-get($breakpoints, large)) {
+		display: flex;
+	}
+}
+
+.archives-section {
+	margin-bottom: vr(2);
+}
+
+.archives-section-articles {
+	flex: 2;
+}
+
+.archives-section-categories {
+	flex: 1;
+}

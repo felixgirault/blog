@@ -17,7 +17,7 @@
 	cursor: pointer;
 
 	&:active,
-	&.button-active {
+	&.active {
 		background: $color-button-background-active;
 	}
 

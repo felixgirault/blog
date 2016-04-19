@@ -12,7 +12,7 @@ html, body, p, ul, ol, code, pre, img { margin: 0; padding: 0; }
 
 html { font-size: 112.5%; line-height: 1.6; background: #fff; color: #222; font-family: "Source Sans Pro", "Arial", "Helvetica", "Liberation Sans", "FreeSans", sans-serif; }
 
-@media all and (min-width: 45rem) { html { font-size: 125%; line-height: 1.6; } }
+@media all and (min-width: 48rem) { html { font-size: 125%; line-height: 1.6; } }
 
 h1, h2, h3, h4, h5, h6 { font-size: 1rem; line-height: 1.6; margin: 0 0 1.6rem 0; font-weight: normal; }
 
@@ -51,7 +51,7 @@ input, textarea { font-size: 1rem; line-height: 1.6; box-sizing: border-box; bor
 
 #submit { display: inline-block; padding: 0.8rem; background: #ccc; color: #fff; font-weight: bold; text-decoration: none; cursor: pointer; width: auto; border: none; }
 
-#submit:active, #submit.button-active { background: #c40; }
+#submit:active, #submit.active { background: #c40; }
 
 #submit:hover, #submit:focus { background: #f50; text-decoration: none; }
 
@@ -77,17 +77,17 @@ pre code { margin: 0 auto; max-width: 40rem; display: block; margin: 1.6rem auto
 /** */
 body { padding: 3.2rem; }
 
-@media screen and (max-width: 45rem) { body { padding: 1.6rem; } }
+@media screen and (max-width: 48rem) { body { padding: 1.6rem; } }
 
 .page-header { margin: 0 auto; max-width: 40rem; margin-bottom: 6.4rem; }
 
-@media screen and (min-width: 45rem) { .page-header { display: flex; justify-content: space-between; } }
+@media screen and (min-width: 48rem) { .page-header { display: flex; justify-content: space-between; } }
 
 .page-menu-item { display: inline-block; }
 
 .page-menu-link { display: inline-block; padding: 0.8rem; background: #ccc; color: #fff; font-weight: bold; text-decoration: none; cursor: pointer; }
 
-.page-menu-link:active, .page-menu-link.button-active { background: #c40; }
+.page-menu-link:active, .page-menu-link.active { background: #c40; }
 
 .page-menu-link:hover, .page-menu-link:focus { background: #f50; text-decoration: none; }
 
@@ -106,13 +106,15 @@ body { padding: 3.2rem; }
 
 .entry-body { margin-bottom: 3.2rem; }
 
-.entry-body p, .entry-body ul, .entry-body ol, .entry-body img, .entry-body iframe { margin: 0 auto; max-width: 40rem; margin-bottom: 1.6rem; }
+.entry-body p, .entry-body h1, .entry-body h2, .entry-body h3, .entry-body h4, .entry-body h5, .entry-body h6, .entry-body ul, .entry-body ol, .entry-body iframe, .entry-body img.size-full { margin: 0 auto; max-width: 40rem; display: block; margin-bottom: 1.6rem; }
 
 .entry-body img.wp-smiley { margin-bottom: 0; }
 
 .entry-body li { position: relative; padding: 0 0 0 1.6rem; }
 
 .entry-body ul li:before { content: '•'; display: block; position: absolute; top: 0; left: 0; line-height: 1.6rem; }
+
+.entry-body .more-link { margin: 0 auto; max-width: 40rem; display: block; }
 
 .entry-footer { margin: 0 auto; max-width: 40rem; color: #888; }
 
@@ -124,7 +126,7 @@ body { padding: 3.2rem; }
 
 .entry-siblings a { display: inline-block; padding: 0.8rem; background: #ccc; color: #fff; font-weight: bold; text-decoration: none; cursor: pointer; }
 
-.entry-siblings a:active, .entry-siblings a.button-active { background: #c40; }
+.entry-siblings a:active, .entry-siblings a.active { background: #c40; }
 
 .entry-siblings a:hover, .entry-siblings a:focus { background: #f50; text-decoration: none; }
 
@@ -175,3 +177,14 @@ body { padding: 3.2rem; }
 .social-link-ouatch:hover .social-link-title, .social-link-ouatch:focus .social-link-title { color: #8c0; }
 
 .social-link-ouatch:after { content: '•'; color: #8c0; }
+
+/** */
+.archives { margin: 0 auto; max-width: 40rem; }
+
+@media screen and (min-width: 48rem) { .archives { display: flex; } }
+
+.archives-section { margin-bottom: 3.2rem; }
+
+.archives-section-articles { flex: 2; }
+
+.archives-section-categories { flex: 1; }
