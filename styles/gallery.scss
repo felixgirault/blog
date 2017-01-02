@@ -1,0 +1,28 @@
+/**
+ *
+ */
+
+.gallery-item {
+	margin-top: 0 !important;
+	margin-bottom: vr(1) !important;
+}
+
+.wp-caption {
+	width: auto !important;
+}
+
+.wp-caption-text {
+	@include typi($typi-small);
+	padding: 0 vr(1);
+	background: $color-gray-dark-2;
+	color: $color-white;
+	text-align: center;
+}
+
+.gallery-item img,
+.wp-caption img {
+	display: block;
+	border: none !important;
+	width: 100% !important;
+	height: 100% !important;
+}
