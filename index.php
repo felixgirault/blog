@@ -10,14 +10,20 @@
 		global $wp_query;
 
 		if ($wp_query->max_num_pages > 1) {
-			echo '<nav role="navigation">';
+			$previous = <<<PREVIOUS
+				<span class="page-navigation-previous">
+					<span>Articles plus récents</span>
+				</span>
+PREVIOUS;
 
-			posts_nav_link(
-				' ',
-				'<div class="previous">Articles plus récents</div>',
-				'<div class="next">Articles plus anciens</div>'
-			);
+			$next = <<<NEXT
+				<span class="page-navigation-next">
+					<span>Articles plus anciens</span>
+				</span>
+NEXT;
 
+			echo '<nav class="page-navigation" role="navigation">';
+			posts_nav_link(' ', $previous, $next);
 			echo '</nav>';
 		}
 	}

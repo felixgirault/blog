@@ -73,11 +73,13 @@ $color-gray-dark-0: #888;
 $color-gray-dark-1: #444;
 $color-gray-dark-2: #222;
 
-$color-blue-light: #08c;
+$color-blue: #08c;
+$color-blue-light: #c7e1f2;
+$color-blue-lighter: #eef6fc;
 $color-blue-dark: #069;
 $color-red-light: #f50;
 $color-red-dark: #c40;
-$color-green: #369200;
+$color-green: #88cc00;
 
 
 
@@ -88,39 +90,41 @@ $color-green: #369200;
 $color-background: $color-white;
 $color-text: $color-gray-dark-2;
 
-$color-link: $color-blue-light;
-$color-link-visited: $color-blue-dark;
+$color-link: $color-blue;
+$color-link-text: $color-text;
+$color-link-text-active: $color-white;
+$color-link-text-secondary: $color-blue;
+$color-link-background: $color-blue-lighter;
+$color-link-background-hover: $color-blue-light;
+$color-link-background-active: $color-blue;
+$color-link-background-visited: $color-blue-lighter;
 
 $color-input-border: $color-gray-light-2;
 
 $color-blockquote-text: $color-gray-dark-0;
 $color-blockquote-ornament: $color-gray-light-0;
 
-$color-button-text: $color-white;
-$color-button-background: $color-gray-light-1;
-$color-button-background-hover: $color-red-light;
-$color-button-background-active: $color-red-dark;
+$color-button-text: $color-text;
+$color-button-text-secondary: $color-blue;
+$color-button-text-active: $color-white;
+$color-button-background: $color-blue-lighter;
+$color-button-background-hover: $color-blue-light;
+$color-button-background-active: $color-blue;
 
-$color-code-text: $color-gray-dark-1;
-$color-code-background: $color-gray-light-3;
-$color-code-border: $color-gray-light-2;
+$color-code-text: $color-white;
+$color-code-background: $color-text;
 $color-code-function: $color-red-dark;
 $color-code-string: $color-green;
 $color-code-number: $color-blue-dark;
 $color-code-comment: $color-gray-dark-0;
 
-$color-entry-footer-text: $color-gray-dark-0;
-$color-entry-footer-link: $color-gray-dark-1;
+$color-entry-meta-text: $color-gray-dark-0;
+$color-entry-meta-link: $color-gray-dark-1;
 
 $color-entry-comment-footer-text: $color-gray-dark-0;
 
-$color-footer-separator: $color-gray-light-0;
+$color-footer-background: $color-gray-light-3;
+$color-footer-border: $color-gray-light-2;
 
-$color-social-link-title: $color-gray-dark-2;
-$color-social-link-description: $color-gray-dark-0;
-
-$color-twitter: #08c;
-$color-github: #069;
-$color-dribbble: #ea4c89;
-$color-soundcloud: #f50;
-$color-ouatch: #8c0;
+$color-social-profile-title: $color-gray-dark-2;
+$color-social-profile-description: $color-gray-dark-0;

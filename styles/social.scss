@@ -2,68 +2,32 @@
  *
  */
 
-@mixin social-link-themed($color) {
-	&:hover,
-	&:focus {
-		.social-link-title {
-			color: $color;
-		}
-	}
-
-	&:after {
-		content: '•';
-		color: $color;
+.social-profile-list {
+	@media screen and (min-width: map-get($breakpoints, large)) {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 vr(-1/2);
 	}
 }
 
-
-
-/**
- *
- */
-
-.social-links {
-	text-align: center;
+.social-profile-item {
+	@media screen and (min-width: map-get($breakpoints, large)) {
+		box-sizing: border-box;
+		flex: 1 1 0;
+		flex-basis: 50%;
+		max-width: 50%;
+		padding: 0 vr(1/2);
+	}
 }
 
-.social-link {
-	position: relative;
+.social-profile {
+	@include button();
 	display: block;
 	margin-bottom: vr(1);
-	text-decoration: none;
-
-	&:hover,
-	&:focus {
-		text-decoration: none;
-	}
 }
 
-.social-link-title {
-	color: $color-social-link-title;
-}
-
-.social-link-description {
-	display: block;
-	color: $color-social-link-description;
-	font-style: italic;
-}
-
-.social-link-twitter {
-	@include social-link-themed($color-twitter);
-}
-
-.social-link-github {
-	@include social-link-themed($color-github);
-}
-
-.social-link-dribbble {
-	@include social-link-themed($color-dribbble);
-}
-
-.social-link-soundcloud {
-	@include social-link-themed($color-soundcloud);
-}
-
-.social-link-ouatch {
-	@include social-link-themed($color-ouatch);
+.social-profile-icon {
+	float: right;
+	width: vr(1);
+	height: vr(1);
 }

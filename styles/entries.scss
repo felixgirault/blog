@@ -7,7 +7,15 @@
 }
 
 .entry-header {
-	margin-bottom: vr(2);
+	margin-bottom: vr(1.5);
+}
+
+.entry-title {
+	margin-bottom: vr(1/2);
+}
+
+.entry-meta {
+	color: $color-entry-meta-text;
 }
 
 .entry-body {
@@ -49,33 +57,18 @@
 		left: 0;
 		line-height: vr(1);
 	}
-
-	.more-link {
-		display: block;
-	}
-}
-
-.entry-footer {
-	color: $color-entry-footer-text;
-
-	a,
-	a:visited {
-		color: $color-entry-footer-link;
-	}
-
-	a:hover,
-	a:focus {
-		text-decoration: underline;
-	}
 }
 
 .entry-siblings {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	margin-bottom: vr(4);
+	margin: 0 vr(-1/2) vr(4) vr(-1/2);
 
 	a {
 		@include button();
+		flex: 1 1 0;
+		margin: 0 vr(1/2);
 
 		span {
 			display: block;

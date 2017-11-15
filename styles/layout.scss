@@ -3,21 +3,22 @@
  */
 
 body {
-	@include container();
-	padding: vr(2);
-
-	@media screen and (max-width: map-get($breakpoints, large)) {
-		padding: vr(1);
-	}
+	overflow-x: hidden;
 }
 
 .page-header {
-	margin-bottom: vr(4);
+	@include container();
+	padding: vr(1);
 
 	@media screen and (min-width: map-get($breakpoints, large)) {
 		display: flex;
 		justify-content: space-between;
+		padding: vr(2);
 	}
+}
+
+.page-branding-name {
+	font-weight: bold;
 }
 
 .page-menu-item {
@@ -29,18 +30,46 @@ body {
 }
 
 .page-body {
-	margin-bottom: vr(4);
+	@include container();
+	padding: vr(2);
+
+	@media screen and (max-width: map-get($breakpoints, large)) {
+		padding: vr(1);
+	}
+}
+
+.page-navigation {
+	display: flex;
+	justify-content: space-between;
+}
+
+.page-navigation-previous,
+.page-navigation-next {
+	display: block;
+	padding: vr(1/2);
+	font-weight: bold;
+}
+
+.page-navigation-previous svg {
+	padding-right: vr(1/2);
+}
+
+.page-navigation-next svg {
+	padding-left: vr(1/2);
 }
 
 .page-footer {
-	margin-bottom: vr(2);
+	margin-top: vr(2);
+	background: $color-footer-background;
+	border-top: 1px solid $color-footer-border;
+	border-bottom: 1px solid $color-footer-background;
+}
 
-	&:before {
-		@include typi($typi-large);
-		content: '~';
-		display: block;
-		margin: vr(3) auto;
-		color: $color-footer-separator;
-		text-align: center;
+.page-footer-inner {
+	@include container();
+	padding: vr(2) vr(2) vr(1) vr(2);
+
+	@media screen and (max-width: map-get($breakpoints, large)) {
+		padding: vr(1) vr(1) 0 vr(1);
 	}
 }

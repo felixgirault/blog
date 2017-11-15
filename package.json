@@ -9,7 +9,7 @@
     "build-scripts": "cp node_modules/prismjs/prism.js prism.js"
   },
   "devDependencies": {
-    "node-sass": "^3.4.2",
+    "node-sass": "^4.6.1",
     "typi": "^2.1.0"
   },
   "dependencies": {

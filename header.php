@@ -37,8 +37,8 @@
 		<header class="page-header">
 			<p class="page-branding" role="banner" itemprop="name">
 				<span itemprop="author" itemscope itemtype="http://schema.org/Person">
-					<span itemprop="name">Félix Girault</span>,<br />
-					<span itemprop="jobTitle">développeur pile complète</span>.
+					<span class="page-branding-name" itemprop="name">Félix Girault</span><br />
+					<span itemprop="jobTitle">développeur pile complète</span>
 				</span>
 			</p>
 

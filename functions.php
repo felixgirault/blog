@@ -6,10 +6,10 @@
 function fgSetupScripts() {
 	wp_deregister_script('jquery');
 	wp_deregister_script('l10n');
+	wp_register_script('prism', get_template_directory_uri() . '/prism.js');
+	wp_enqueue_script('prism');
 
 	if (is_single()) {
-		wp_register_script('prism', get_template_directory_uri() . '/prism.js');
-		wp_enqueue_script('prism');
 		wp_enqueue_script('comment-reply');
 	}
 }

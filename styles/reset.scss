@@ -34,7 +34,7 @@ h6 {
 
 h1 {
 	@include typi($typi-h1);
-	color: $color-blue-dark;
+	color: $color-text;
 	font-weight: bolder;
 }
 
@@ -74,17 +74,8 @@ ul ul {
 }
 
 a {
-	color: $color-link;
-	text-decoration: none;
-
-	&:hover,
-	&:focus {
-		text-decoration: underline;
-	}
-
-	&:visited {
-		color: $color-link-visited;
-	}
+	@include button(true);
+	padding: 0 vr(1/8);
 }
 
 blockquote {
@@ -103,4 +94,13 @@ blockquote p:before {
 	color: $color-blockquote-ornament;
 	font-size: vr(2);
 	line-height: 1em;
+}
+
+.icon {
+	display: inline-block;
+	width: vr(1);
+	height: vr(1);
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
 }

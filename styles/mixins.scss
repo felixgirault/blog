@@ -7,27 +7,37 @@
 	max-width: $content-width;
 }
 
-@mixin button {
-	display: inline-block;
+@mixin button($link: false) {
+	border-bottom: 1px solid $color-link;
 	padding: vr(1/2);
-	background: $color-button-background;
-	color: $color-button-text;
-	font-weight: bold;
+	background: $color-link-background;
+	color: $color-link-text;
 	text-decoration: none;
 	cursor: pointer;
 
-	&:active,
-	&.active {
-		background: $color-button-background-active;
+	@if $link == true {
+		display: inline;
+	} @else {
+		display: inline-block;
+		font-weight: bold;
 	}
 
 	&:hover,
 	&:focus {
-		background: $color-button-background-hover;
+		background: $color-link-background-hover;
+		color: $color-link-text;
 		text-decoration: none;
 	}
 
-	&:visited {
-		color: $color-button-text;
+	&:active,
+	&.active {
+		background: $color-link-background-active;
+		color: $color-link-text-active;
+	}
+
+	span + span {
+		display: block;
+		font-weight: normal;
+		color: $color-link-text-secondary;
 	}
 }

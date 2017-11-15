@@ -5,6 +5,11 @@
 .gallery-item {
 	margin-top: 0 !important;
 	margin-bottom: vr(1) !important;
+
+	a {
+		display: block;
+		padding: 0;
+	}
 }
 
 .wp-caption {

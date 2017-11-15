@@ -5,6 +5,7 @@
 code {
 	@include typi($typi-small);
 	background: $color-code-background;
+	color: $color-code-text;
 	font-family: $font-family-mono;
 	-moz-tab-size: 3;
 	-o-tab-size: 3;
@@ -13,9 +14,8 @@ code {
 
 pre {
 	display: block;
-	border: 1px dotted $color-code-border;
-	margin: 0 vr(-100) vr(1) vr(-100);
-	padding: 0 vr(100);
+	margin-bottom: vr(1);
+	padding: vr(1);
 	background: $color-code-background;
 	color: $color-code-text;
 	font-family: $font-family-mono;
@@ -30,11 +30,12 @@ pre {
 }
 
 .token.keyword {
-	font-weight: bold;
+	color: #9c9bdd;
+	font-style: italic;
 }
 
 .token.function {
-	color: $color-code-function;
+	color: #c6c5eb;
 }
 
 .token.string {
@@ -42,10 +43,18 @@ pre {
 }
 
 .token.number {
-	color: $color-code-number;
+	color: #8cd6d8;
 }
 
 .token.comment {
-	color: $color-code-comment;
+	color: #627487;
 	font-style: italic;
+}
+
+.token.punctuation {
+	color: #627487;
+}
+
+.token.operator {
+	color: #d3807d;
 }
